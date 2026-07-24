@@ -6,9 +6,19 @@ function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-slate-900 text-white flex items-center"
+      className="relative min-h-screen bg-slate-900 text-white flex items-center overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse -translate-x-1/2 -translate-y-1/2"></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
 
         {/* Left Side */}
         <div data-aos="fade-right">
@@ -40,7 +50,7 @@ function Hero() {
             />
           </div>
 
-          <p className="text-gray-400 text-lg leading-8 mb-8">
+          <p className="text-gray-300 text-lg leading-8 mb-8">
             Passionate about building modern web applications,
             AI-powered solutions, and solving real-world problems
             using React, FastAPI, Python, and MongoDB.
@@ -49,19 +59,19 @@ function Hero() {
           {/* Buttons */}
           <div className="flex gap-4 flex-wrap">
             <a
-  href="/resume.pdf"
-  download
-  className="bg-cyan-500 hover:bg-cyan-600 hover:scale-105 transition-all duration-300 px-6 py-3 rounded-lg font-semibold shadow-lg"
->
-  Download Resume
-</a>
+              href="/resume.pdf"
+              download
+              className="bg-cyan-500 hover:bg-cyan-600 hover:scale-105 transition-all duration-300 px-6 py-3 rounded-lg font-semibold shadow-lg"
+            >
+              Download Resume
+            </a>
 
             <a
-  href="#contact"
-  className="border border-cyan-500 hover:bg-cyan-500 hover:text-white hover:scale-105 transition-all duration-300 px-6 py-3 rounded-lg font-semibold"
->
-  Contact Me
-</a>
+              href="#contact"
+              className="border border-cyan-500 hover:bg-cyan-500 hover:text-white hover:scale-105 transition-all duration-300 px-6 py-3 rounded-lg font-semibold"
+            >
+              Contact Me
+            </a>
           </div>
 
           {/* Social Icons */}
